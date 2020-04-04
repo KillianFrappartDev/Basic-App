@@ -32,7 +32,7 @@
 </head>
  
 <body>
-    <div class="playGame">
+    <div class="playGame ">
         <h1>Do you want to play ?</h1>
         <button class="startBtn">Start</button>
     </div>
@@ -40,11 +40,28 @@
         <div class="bot">
                 <img id="bot--card" src="" alt="">
         </div>
+        <div class="instruction hide">
+            Draw a card
+        </div>
         <div class="player">
-                <img id="player--card" src="" alt="">
+            <div class="player-cash hide">
+                <h2 id="player-bank">1000$</h2>
+            </div>
+            <div class="player-bet hide">
+                <div class="bet-btn player-bet-100">
+                    <button class="bet-100 bet-select">100$</button>
+                </div>
+                <div class="bet-btn player-bet-200">
+                    <button class="bet-200 bet-select">200$</button>
+                </div>
+                <div class="bet-btn player-bet-500">
+                    <button class="bet-500 bet-select">500$</button>
+                </div>
+            </div>
+            <button class="nextPlayer hide">DRAW</button>
+            <img id="player--card" src="" alt="">
         </div> 
     </div>
-    <button class="nextPlayer hide">NEXT</button>
 
  
  

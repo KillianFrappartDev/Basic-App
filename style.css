@@ -3,6 +3,10 @@ body {
     background-size: cover;
 }
 
+button:focus {
+    outline:0
+}
+
 .playGame {
     position: absolute;
     top: 50%;
@@ -37,12 +41,23 @@ body {
     width: 1200px;
     height: 800px;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     border: 5px solid rgb(0, 0, 0);
-    margin-top: 14rem;
+    margin-top: 10rem;
     border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.5);
     animation-delay: 1s;
+}
+
+.instruction {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(169, 169, 169, 0.514);
+    animation-delay: 2s;
+    font-size: 5rem;
+    transition: all 1s ease;
 }
 
 .bot {
@@ -56,7 +71,7 @@ body {
 .bot img {
     position: absolute;
     width: 10rem;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -73,30 +88,98 @@ body {
 .player img {
     position: absolute;
     width: 10rem;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+.player-cash {
+    width: 10rem;
+    height: 5rem;
+    background-color: rgba(100, 100, 0, 0.4);
+    border: 3px solid rgb(150, 150, 0);
+    border-radius: 5px;
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFF;
+    animation-delay: 2s;
+}
+
+.player-cash h2 {
+    margin-top: 1rem;
+}
+
 .p-active {
-    background-color: rgba(0, 255, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .b-active {
-    background-color: rgba(0, 255, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
 
 }
 
 .nextPlayer {
-    width: 200px;
-    height: 80px;
-    border: none;
+    width: 10rem;
+    height: 5rem;
     border-radius: 5px;
-    background-color: blue;
+    background-color: rgba(100, 0, 0, 0.5);
+    border: 3px solid rgba(150, 0, 0, 1);
     color: #FFF;
-    animation-delay: 1s;
+    animation-delay: 2s;
+    position: absolute;
+    top: 55%;
+    right: 20%;
+    transform: translate(50%, -50%);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.nextPlayer:hover {
+    background-color: rgb(150, 0, 0);
 }
 
 .hide {
     display: none;
 }
+
+.player-bet {
+    position: absolute;
+    bottom: 2rem;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+.bet-btn {
+    display: inline-block;
+}
+
+.bet-btn button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 1rem;
+    color: #FFF;
+}
+
+.bet-select {
+    background-color: rgba(0, 0, 100, 0.5);
+    border: 3px solid rgba(0, 0, 150, 1);
+}
+
+.bet-active {
+    background-color: rgba(0, 150, 0, 1);
+    border: 3px solid rgba(0, 150, 0, 1);
+}
+
+.bet-select:hover {
+    background-color: rgba(0, 0, 150, 1);
+}
+
+.bet-active:hover {
+    background-color: rgba(0, 150, 0, 1);
+    border: 3px solid rgba(0, 150, 0, 1);
+}
+
